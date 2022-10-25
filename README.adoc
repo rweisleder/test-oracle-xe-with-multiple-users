@@ -1,0 +1,11 @@
+= Example: Oracle XE Docker Container With Multiple Users
+
+This repository shows how to create multiple app users inside a https://hub.docker.com/r/gvenzl/oracle-xe[gvenzl/oracle-xe] docker container.
+
+To get started, run:
+[source,bash]
+----
+docker run -e ORACLE_RANDOM_PASSWORD=yes \
+  -v ./initdb:/container-entrypoint-initdb.d \
+  gvenzl/oracle-xe
+----
